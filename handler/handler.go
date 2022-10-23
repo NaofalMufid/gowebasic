@@ -76,6 +76,7 @@ func ProductHandler(w http.ResponseWriter, r *http.Request) {
 		{ID: 1, Name: "Super73-S2", Price: 4000, Stock: 5},
 		{ID: 2, Name: "Super73-RX", Price: 3000, Stock: 2},
 		{ID: 3, Name: "Super73-ZC", Price: 3500, Stock: 4},
+		{ID: 3, Name: "Super73-RS", Price: 3500, Stock: 14},
 	}
 
 	err = tmpl.Execute(w, data)

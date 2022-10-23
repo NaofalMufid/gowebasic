@@ -14,10 +14,11 @@
         <!-- dengan list -->
         {{ range . }}
             <p>
-                {{ .Name }} - {{ .Price }}
-                {{ if lt .Stock 3 }}
+                {{ .Name }} - {{ .Price }} - {{ .StockStatus }}
+                <!-- dengan action view -->
+                <!-- /{/{ if lt .Stock 3 }}
                     Meh entek
-                {{ end }}
+                /{/{ end }} -->
             </p>
         {{ end }}
     </div>
