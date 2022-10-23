@@ -1,0 +1,14 @@
+.header {
+    margin-bottom: 30px;
+}
+
+.box-with-shadow{
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 1px #ff3121;
+    margin-bottom: 30px;
+}
+
+.box{
+    color: brown;
+}

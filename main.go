@@ -24,6 +24,9 @@ func main() {
 		w.Write([]byte("Tos Page"))
 	})
 
+	fileServer := http.FileServer(http.Dir("assets"))
+	mux.Handle("/static/", http.StripPrefix("/static", fileServer))
+
 	log.Println("Starting web on port 8080")
 
 	// run server

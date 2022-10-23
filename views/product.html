@@ -13,13 +13,13 @@
 
         <!-- dengan list -->
         {{ range . }}
-            <p>
+            <div class="box-with-shadow">
                 {{ .Name }} - {{ .Price }} - {{ .StockStatus }}
+            </div>
                 <!-- dengan action view -->
                 <!-- /{/{ if lt .Stock 3 }}
                     Meh entek
                 /{/{ end }} -->
-            </p>
         {{ end }}
     </div>
 {{ end }}
