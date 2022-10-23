@@ -71,7 +71,12 @@ func ProductHandler(w http.ResponseWriter, r *http.Request) {
 	// }
 
 	// data parsing dari struct
-	data := entity.Product{ID: 3, Name: "Super73-S2", Price: 4000, Stock: 5}
+	// data := entity.Product{ID: 3, Name: "Super73-S2", Price: 4000, Stock: 5}
+	data := []entity.Product{
+		{ID: 1, Name: "Super73-S2", Price: 4000, Stock: 5},
+		{ID: 2, Name: "Super73-RX", Price: 3000, Stock: 2},
+		{ID: 3, Name: "Super73-ZC", Price: 3500, Stock: 4},
+	}
 
 	err = tmpl.Execute(w, data)
 	if err != nil {
