@@ -2,6 +2,13 @@
 
 {{ define "main" }}
     <div class="box">
-        Product with id : {{ .id }}
+        <!-- dengan map -->
+        <!-- Product with id : {/{/ .id /}/} -->
+
+        <!-- dengan struct -->
+        <p> {{ .ID }} </p>
+        <p> {{ .Name }} </p>
+        <p> {{ .Price }} </p>
+        <p> {{ .Stock }} </p>
     </div>
 {{ end }}

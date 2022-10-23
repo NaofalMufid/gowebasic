@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"goweb/entity"
 	"html/template"
 	"log"
 	"net/http"
@@ -56,9 +57,6 @@ func ProductHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// fmt.Fprintf(w, "Halaman produk %d", idNumb)
-	data := map[string]interface{}{
-		"id": idNumb,
-	}
 
 	tmpl, err := template.ParseFiles(path.Join("views", "product.html"), path.Join("views", "layout.html"))
 	if err != nil {
@@ -66,6 +64,14 @@ func ProductHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Error di product kan ya", http.StatusInternalServerError)
 		return
 	}
+
+	// data parsing dari map
+	// data := map[string]interface{}{
+	// 	"id": idNumb,
+	// }
+
+	// data parsing dari struct
+	data := entity.Product{ID: 3, Name: "Super73-S2", Price: 4000, Stock: 5}
 
 	err = tmpl.Execute(w, data)
 	if err != nil {
